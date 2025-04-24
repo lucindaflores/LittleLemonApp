@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "4E1DABE3-C04D-4FE1-8AEE-6C9EAF8FC5EE"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2D978D99-6F03-42CD-AC28-EE54E329626F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LittleLemonRestaurantApp/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "NetworkManager"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "2D978D99-6F03-42CD-AC28-EE54E329626F - 2f1a3ede533acb6b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LittleLemonRestaurantApp.NetworkManager.__allocating_init() -&gt; LittleLemonRestaurantApp.NetworkManager"
+                  moduleName = "LittleLemonRestaurantApp.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucindaflores/Library/Mobile%20Documents/com~apple~CloudDocs/Projects/Certs%20&amp;%20Courses/Meta%20iOS%20Developer/Course%2012/LittleLemonRestaurantApp/LittleLemonRestaurantApp/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "2D978D99-6F03-42CD-AC28-EE54E329626F - d7e038bf2b0679e6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LittleLemonRestaurantApp.NetworkManager.deinit"
+                  moduleName = "LittleLemonRestaurantApp.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucindaflores/Library/Mobile%20Documents/com~apple~CloudDocs/Projects/Certs%20&amp;%20Courses/Meta%20iOS%20Developer/Course%2012/LittleLemonRestaurantApp/LittleLemonRestaurantApp/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "2D978D99-6F03-42CD-AC28-EE54E329626F - b87b9e91e3263ecb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LittleLemonRestaurantApp.NetworkManager.__deallocating_deinit"
+                  moduleName = "LittleLemonRestaurantApp.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucindaflores/Library/Mobile%20Documents/com~apple~CloudDocs/Projects/Certs%20&amp;%20Courses/Meta%20iOS%20Developer/Course%2012/LittleLemonRestaurantApp/LittleLemonRestaurantApp/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "2D978D99-6F03-42CD-AC28-EE54E329626F - f0e7b6e3446e5cfa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LittleLemonRestaurantApp.NetworkManager.init() -&gt; LittleLemonRestaurantApp.NetworkManager"
+                  moduleName = "LittleLemonRestaurantApp.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucindaflores/Library/Mobile%20Documents/com~apple~CloudDocs/Projects/Certs%20&amp;%20Courses/Meta%20iOS%20Developer/Course%2012/LittleLemonRestaurantApp/LittleLemonRestaurantApp/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "99FBDD8A-31B2-4B25-B36E-0510680B12AD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LittleLemonRestaurantApp/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "getMenuData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C6E5CFBB-EC88-40AD-A2EC-1A2646FF6364"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LittleLemonRestaurantApp/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "getMenuData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C6E5CFBB-EC88-40AD-A2EC-1A2646FF6364 - 10ff8c874f4329fe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for LittleLemonRestaurantApp.NetworkManager.getMenuData() async throws -&gt; Swift.Array&lt;LittleLemonRestaurantApp.MenuItem&gt;"
+                  moduleName = "LittleLemonRestaurantApp.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucindaflores/Library/Mobile%20Documents/com~apple~CloudDocs/Projects/Certs%20&amp;%20Courses/Meta%20iOS%20Developer/Course%2012/LittleLemonRestaurantApp/LittleLemonRestaurantApp/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40">
+               </Location>
+               <Location
+                  uuid = "C6E5CFBB-EC88-40AD-A2EC-1A2646FF6364 - 21c83095026c57e1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for LittleLemonRestaurantApp.NetworkManager.getMenuData() async throws -&gt; Swift.Array&lt;LittleLemonRestaurantApp.MenuItem&gt;"
+                  moduleName = "LittleLemonRestaurantApp.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucindaflores/Library/Mobile%20Documents/com~apple~CloudDocs/Projects/Certs%20&amp;%20Courses/Meta%20iOS%20Developer/Course%2012/LittleLemonRestaurantApp/LittleLemonRestaurantApp/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A9637D39-489C-448B-8730-75D4031F5EFE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LittleLemonRestaurantApp/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "getMenuData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
