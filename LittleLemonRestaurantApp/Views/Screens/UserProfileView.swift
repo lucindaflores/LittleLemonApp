@@ -11,8 +11,6 @@ struct UserProfileView: View {
     
     //This will automatically reference the presentation environment in SwiftUI which will allow you to reach the navigation logic.
     @Environment(\.presentationMode) var presentationMode
-
-    @ObservedObject var viewModel = UserProfileViewModel()
     
     let firstNameKey = UserDefaults().string(forKey: "first_name_key") ?? "No first name"
     let lastNameKey = UserDefaults().string(forKey: "last_name_key") ?? "No last name"

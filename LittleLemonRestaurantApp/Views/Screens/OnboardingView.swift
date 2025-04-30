@@ -37,11 +37,12 @@ struct OnboardingView: View {
                     .padding(.horizontal, 30)
                 }
                 .background(Color.greenPrimary)
-                .padding(.horizontal, -25)
+
                 
                 form
+                .padding()
             }
-            .padding()
+            //.padding()
             .alert("Invalid Input", isPresented: $showAlert) {
                 Button("OK", role: .cancel) { }
             } message: {
@@ -55,6 +56,10 @@ struct OnboardingView: View {
                 if UserDefaults.standard.bool(forKey: keyIsLoggedIn) {
                     showHomeScreen = true
                 }
+                
+                firstName = " "
+                lastName = " "
+                email = " "
             }
             
             Spacer()

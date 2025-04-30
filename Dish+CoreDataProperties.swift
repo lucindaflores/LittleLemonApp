@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-
 extension Dish {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Dish> {
@@ -23,6 +22,7 @@ extension Dish {
     @NSManaged public var id: Int32
     @NSManaged public var category: String?
 
+    
 }
 
 extension Dish : Identifiable {
