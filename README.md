@@ -65,5 +65,5 @@ A quick walkthrough of the main features and user flow:
 ## 👩‍💻 Author
 
 **Lucinda Flores**  
-GitHub: https://github.com/lucindaflores
-https://lucindaflores-portfolio.webflow.io
+- GitHub: https://github.com/lucindaflores
+- Website: https://lucindaflores-portfolio.webflow.io
