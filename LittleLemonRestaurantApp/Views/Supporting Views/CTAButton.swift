@@ -15,9 +15,9 @@ struct CTAButton: View {
             .fontWeight(.heavy)
             .padding()
             .frame(maxWidth: .infinity)
-            .background(Color.yellowPrimary)
+            .background(Color.primaryColor2)
             .clipShape(RoundedRectangle(cornerRadius: 10))
-            .foregroundColor(.darkGrayHighlight)
+            .foregroundColor(.highlightColor2)
     }
 }
 

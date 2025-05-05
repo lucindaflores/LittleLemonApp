@@ -18,11 +18,11 @@ struct DishDetailView: View {
                     .bold()
 
                 DishImageView(imageURL: dish.image)
-
-                Text("Price: $\(String(describing: dish.price))")
+                
+                Text(formatPrice(dish.price ?? "No price"))
                     .font(.title3)
 
-                Text("Category: \(String(describing: dish.category))")
+                Text("Category: \(String( dish.category ?? "No Category"))")
                     .font(.subheadline)
                     .foregroundColor(.gray)
 

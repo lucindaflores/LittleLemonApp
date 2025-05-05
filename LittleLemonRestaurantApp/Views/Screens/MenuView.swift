@@ -16,9 +16,12 @@ struct MenuView: View {
     @State private var errorMessage: String?
     @State private var searchText: String = ""
     @State private var shouldFetchData = true
-    
+
+    @State private var selectedCategory: String? = nil
+
     var body: some View {
         NavigationStack {
+            /* Section: Header */
             VStack(alignment: .leading) {
                 HStack {
                     Rectangle()
@@ -28,15 +31,52 @@ struct MenuView: View {
                     HeaderSection()
                 }
                 .padding(.horizontal)
-                searchAndHeroText
                 
-                MenuBreakdownSection()
+                /* Section: Search & Hero text */
+                VStack {
+                    HeroText()
+                    
+                    HStack {
+                        Image(systemName: "magnifyingglass")
+                            .foregroundColor(.gray)
+                        
+                        TextField("Search menu", text: $searchText)
+                            .textFieldStyle(PlainTextFieldStyle())
+                    }
+                    .padding(10)
+                    .background(Color.white)
+                    .cornerRadius(10)
+                }
+                .padding(.vertical, 20)
+                .padding(.horizontal)
+                .background(Color.primaryColor1)
+                
+                MenuBreakdownSection(selectedCategory: $selectedCategory)
                 
                 Divider()
-                    .foregroundStyle(Color.darkGrayHighlight)
+                    .foregroundStyle(Color.highlightColor2)
                 
-                contentSection
-                
+                /* Section: Menu Content */
+                Group {
+                    if isLoading {
+                        ProgressView("Loading menu...")
+                            .frame(maxWidth: .infinity, alignment: .center)
+                    } else if let errorMessage = errorMessage {
+                        Text("Failed to load menu: \(errorMessage)")
+                            .foregroundColor(.red)
+                            .multilineTextAlignment(.center)
+                    } else {
+                       /* Menu List */
+                        FetchedObjects(predicate: buildPredicate(), sortDescriptors: buildSortDescriptors()) { (dishes: [Dish]) in
+                            List(dishes, id: \.self) { dish in
+                                NavigationLink(destination: DishDetailView(dish: dish)) {
+                                    DishCell(dish: dish)
+                                }
+                            }
+                            .listStyle(.plain) // Improving list appearance
+                        }
+                    }
+                }
             }
             .task {
                 if shouldFetchData {
@@ -49,45 +89,7 @@ struct MenuView: View {
         
     }
     
-    // MARK: - Extracted subviews
-    private var searchAndHeroText: some View {
-        VStack {
-            HeroText()
-            TextField("􀊫 Search menu", text: $searchText)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding(.horizontal, 10)
-        }
-        .padding(.vertical, 20)
-        .padding(.horizontal)
-        .background(Color.greenPrimary)
-    }
-    
-    private var contentSection: some View {
-        Group {
-            if isLoading {
-                ProgressView("Loading menu...")
-                    .frame(maxWidth: .infinity, alignment: .center)
-            } else if let errorMessage = errorMessage {
-                Text("Failed to load menu: \(errorMessage)")
-                    .foregroundColor(.red)
-                    .multilineTextAlignment(.center)
-            } else {
-                menuList
-            }
-        }
-    }
-    
-    private var menuList: some View {
-        FetchedObjects(predicate: buildPredicate(), sortDescriptors: buildSortDescriptors()) { (dishes: [Dish]) in
-            List(dishes, id: \.self) { dish in
-                NavigationLink(destination: DishDetailView(dish: dish)) {
-                    DishCell(dish: dish)
-                }
-            }
-            .listStyle(.plain) // Improving list appearance
-        }
-    }
-    
+
     // MARK: - Async fetch function
     private func loadMenuIntoCoreData() async {
         do {
@@ -141,10 +143,22 @@ struct MenuView: View {
     
     // MARK: - Sorting and filtering Step 4: Build Predicate
     private func buildPredicate() -> NSPredicate {
-        if searchText.isEmpty {
-            return NSPredicate(value: true) // No filtering
+        
+        var predicates: [NSPredicate] = []
+        
+
+        if !searchText.isEmpty {
+            predicates.append(NSPredicate(format: "title CONTAINS[cd] %@", searchText))
+        }
+
+        if let category = selectedCategory {
+            predicates.append(NSPredicate(format: "category ==[cd] %@", category))
+        }
+
+        if predicates.isEmpty {
+            return NSPredicate(value: true)
         } else {
-            return NSPredicate(format: "title CONTAINS[cd] %@", searchText)
+            return NSCompoundPredicate(andPredicateWithSubpredicates: predicates)
         }
     }
 }

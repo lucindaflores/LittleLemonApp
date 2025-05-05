@@ -29,6 +29,7 @@ struct UserProfileView: View {
     
     var body: some View {
         VStack {
+            /* Section: Header */
             HStack(spacing: 20) {
                 CustomBackButton {
                     self.presentationMode.wrappedValue.dismiss()
@@ -38,9 +39,9 @@ struct UserProfileView: View {
                 HeaderSection()
             }
             .padding()
-                
+            
+            /* Section: Personal Information */
             ScrollView {
-                /* Personal Information Section */
                 VStack(alignment: .leading) {
                     Text("Personal Information")
                         .font(.title2)
@@ -67,7 +68,7 @@ struct UserProfileView: View {
                     }
                     .padding(.bottom, 10)
                     
-                    // Form
+                    /* Section: Form */
                     VStack(alignment: .leading, spacing: 5) {
                         FormFields(firstName: $firstName,
                                    lastName: $lastName,
@@ -75,7 +76,7 @@ struct UserProfileView: View {
                     }
                     .padding(.bottom, 20)
                     
-                    //notificationSettingsSection
+                    /* Section: Notification Settings */
                     VStack(alignment: .leading) {
                         Text("Email Notifications")
                             .font(.title2)
@@ -86,11 +87,11 @@ struct UserProfileView: View {
                             Toggle("Special Offers", isOn: $specialOffers)
                             Toggle("Newsletter", isOn: $newsletter)
                         }
-                        .tint(Color.greenPrimary)
+                        .tint(Color.primaryColor1)
                         
                     }
                     
-                    //actionButtons
+                    /* Section: Action buttons */
                     Button {
                         UserDefaults.standard.set(false, forKey: keyIsLoggedIn)
                         //Back to previous screen
@@ -124,48 +125,25 @@ struct UserProfileView: View {
             }
         }
     }
-    
-    
-    var profileImageView: some View {
-        Image("Profile")
-            .resizable()
-            .scaledToFit()
-            .frame(width: 80, height: 80)
-            .clipShape(Circle())
-    }
-    
-    
+
 }
+
+
+//MARK: - Previews
 #Preview {
     UserProfileView()
         .background(Color.white)
 }
 
-
-// MARK: - Extensions
-extension UserProfileView {
-    struct GreenButtonStyle: ButtonStyle {
-        func makeBody(configuration: Configuration) -> some View {
-            configuration.label
-                .padding()
-                .background(Color.greenPrimary)
-                .foregroundColor(.white)
-                .bold()
-                .clipShape(RoundedRectangle(cornerRadius: 10))
-        }
-    }
-    
-    struct WhiteButtonStyle: ButtonStyle {
-        func makeBody(configuration: Configuration) -> some View {
-            configuration.label
-                .padding()
-                .background(Color.white)
-                .foregroundColor(Color.greenPrimary)
-                .bold()
-                .overlay(RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color.greenPrimary, lineWidth: 4))
-                .clipShape(RoundedRectangle(cornerRadius: 10))
-        }
-    }
+//MARK: - Extracted Subviews
+var profileImageView: some View {
+    Image("Profile")
+        .resizable()
+        .scaledToFit()
+        .frame(width: 80, height: 80)
+        .clipShape(Circle())
 }
+
+
+
 

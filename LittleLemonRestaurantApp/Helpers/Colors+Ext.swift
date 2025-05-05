@@ -5,7 +5,7 @@
 //  Created by Lucinda Flores on 05/05/2025.
 //
 
-import Foundation
+ import SwiftUI
 
 extension Color {
     static let primaryColor1 = Color(#colorLiteral(red: 0.2862745225, green: 0.3686274588, blue: 0.3411764801, alpha: 1))
@@ -16,4 +16,7 @@ extension Color {
     
     static let highlightColor1 = Color(#colorLiteral(red: 0.9276351333, green: 0.9375831485, blue: 0.9331009984, alpha: 1))
     static let highlightColor2 = Color(#colorLiteral(red: 0.1999999881, green: 0.1999999881, blue: 0.1999999881, alpha: 1))
+    
+    static let primaryColor1Light = Color(#colorLiteral(red: 0.2862745225, green: 0.3686274588, blue: 0.3411764801, alpha: 0.6964455712))
+    static let highlightColor2Light = Color(#colorLiteral(red: 0.1999999881, green: 0.1999999881, blue: 0.1999999881, alpha: 0.8018677566))
 }

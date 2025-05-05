@@ -15,21 +15,21 @@ struct FormFields: View {
     
     var body: some View {
         Text("First Name *")
-            .foregroundStyle(Color.darkGrayHighlight.opacity(0.8))
+            .foregroundStyle(Color.highlightColor2Light)
             .bold()
         TextField("", text: $firstName)
             .standardTextFieldStyle()
             .padding(.bottom, 15)
         
         Text("Last Name *")
-            .foregroundStyle(Color.darkGrayHighlight.opacity(0.8))
+            .foregroundStyle(Color.highlightColor2Light)
             .bold()
         TextField("", text: $lastName)
             .standardTextFieldStyle()
             .padding(.bottom, 15)
         
         Text("Email *")
-            .foregroundStyle(Color.darkGrayHighlight.opacity(0.8))
+            .foregroundStyle(Color.highlightColor2Light)
             .bold()
         TextField("", text: $email)
             .standardTextFieldStyle()

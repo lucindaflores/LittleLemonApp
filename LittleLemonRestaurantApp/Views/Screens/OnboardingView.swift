@@ -27,8 +27,15 @@ struct OnboardingView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                header
+                /* Section: Header */
+                HStack {
+                    Image("LittleLemonLogo")
+                        .resizable()
+                        .frame(width: 160, height: 40)
+                        .padding()
+                }
                 
+                /* Section: Hero */
                 ZStack {
                     VStack {
                         HeroText()
@@ -36,10 +43,22 @@ struct OnboardingView: View {
                     .padding(.vertical, 20)
                     .padding(.horizontal, 30)
                 }
-                .background(Color.greenPrimary)
+                .background(Color.primaryColor1)
 
-                
-                form
+                /* Section: Form */
+                VStack(alignment: .leading, spacing: 5) {
+                    
+                    FormFields(firstName: $firstName,
+                               lastName: $lastName,
+                               email: $email)
+                        
+                    Button {
+                        registerUser()
+                    } label: {
+                        CTAButton(text: "Register")
+                    }
+                    .padding(.top, 30)
+                }
                 .padding()
             }
             //.padding()
@@ -67,32 +86,6 @@ struct OnboardingView: View {
     }
     
     // MARK: - Extracted subviews
-    private var header: some View {
-        HStack {
-            Image("LittleLemonLogo")
-                .resizable()
-                .frame(width: 160, height: 40)
-                .padding()
-        }
-    }
-    
-    private var form: some View {
-        VStack(alignment: .leading, spacing: 5) {
-            
-            FormFields(firstName: $firstName,
-                       lastName: $lastName,
-                       email: $email)
-                
-            Button {
-                registerUser()
-            } label: {
-                CTAButton(text: "Register")
-            }
-            .padding(.top, 30)
-        }
-        .padding()
-    }
-    
     private var registerButton: some View {
         Button {
             registerUser()
@@ -124,11 +117,7 @@ struct OnboardingView: View {
         }
     }
     
-    // Basic email validation
-    func isValidEmail(_ email: String) -> Bool {
-        let emailRegEx = #"^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$"#
-        return NSPredicate(format: "SELF MATCHES %@", emailRegEx).evaluate(with: email)
-    }
+
     
 }
 // MARK: - Previews
@@ -137,14 +126,6 @@ struct OnboardingView: View {
 }
 
 
-// MARK: - Extensions
-extension View {
-    func standardTextFieldStyle() -> some View {
-        self.textFieldStyle(RoundedBorderTextFieldStyle())
-            .foregroundStyle(Color.darkGrayHighlight)
-            .autocapitalization(.words)
-    }
-}
 
 
 

@@ -19,12 +19,12 @@ struct DishCell: View {
                 
                 Text(dish.descriptionText ?? "No description")
                     .font(.body)
-                    .foregroundStyle(Color.greenPrimary)
+                    .foregroundStyle(Color.primaryColor1)
                     .padding(.trailing, 5)
                 
-                Text(dish.price ?? "No price")
+                Text(formatPrice(dish.price ?? "No price"))
                     .font(.callout)
-                    .foregroundStyle(Color.greenPrimary)
+                    .foregroundStyle(Color.highlightColor2)
                     .bold()
             }
             .accessibilityElement(children: .combine)

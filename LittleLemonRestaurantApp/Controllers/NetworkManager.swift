@@ -30,6 +30,7 @@ class NetworkManager  {
 
             do {
                 let decoded = try JSONDecoder().decode(Menu.self, from: data)
+                print(decoded)
                 return decoded.menu
             } catch {
                 print(NetworkError.decodingFailure(error).localizedDescription)

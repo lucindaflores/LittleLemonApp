@@ -14,7 +14,7 @@ struct CustomBackButton: View {
         Button(action: action) {
             Image(systemName: "arrow.left.circle.fill")
                 .font(.largeTitle) 
-                .foregroundColor(Color.greenPrimary)
+                .foregroundColor(Color.primaryColor1)
         }
     }
 }

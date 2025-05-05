@@ -12,7 +12,7 @@ struct HeroText: View {
         HStack {
             VStack(alignment: .leading) {
                 Text("Little Lemon")
-                    .foregroundStyle(Color.yellowPrimary)
+                    .foregroundStyle(Color.primaryColor2)
                     .font(.title)
                     .bold()
                 
