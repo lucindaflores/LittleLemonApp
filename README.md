@@ -44,19 +44,21 @@ Once fetched, the data is saved locally using Core Data to support offline acces
 
 ---
 
-## 🧩 Figma Wireframes & Mockups
+## 🧩 Figma Wireframes
 
 The user interface was designed using Figma prior to implementation. Below are the wireframes and mockups that guided the visual and structural design of the app:
 
-📸 _Coming soon_
+![Screenshot 2025-05-05 at 15 07 26](https://github.com/user-attachments/assets/79ba2047-9fb1-4d77-a4b0-875539bf1a86)
+
+[PG_LittleLemon_StyleGuide.pdf](https://github.com/user-attachments/files/20037344/PG_LittleLemon_StyleGuide.pdf)
 
 ---
 
 ## 📲 App Preview
 
-A walkthrough of the main features and user flow:
+A quick walkthrough of the main features and user flow:
 
-📸 _Coming soon_  
+![Simulator Screen Recording - iPhone 16 Pro - 2025-05-05 at 15 01 14](https://github.com/user-attachments/assets/523f3f6f-4247-4cc3-943a-680a8f48c15b) 
 
 ---
 
