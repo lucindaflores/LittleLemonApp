@@ -23,7 +23,6 @@ This app was completed and peer-reviewed on **May 2nd, 2025** as the final proje
 - Detail view for individual dishes
 - Persistent user data using **UserDefaults**
 - Persistent menu data using **Core Data**
-- MVVM architecture with reusable components
 - Tab bar navigation between Menu and Profile
 
 ---
@@ -66,4 +65,3 @@ A quick walkthrough of the main features and user flow:
 
 **Lucinda Flores**  
 - GitHub: https://github.com/lucindaflores
-- Website: https://lucindaflores-portfolio.webflow.io
